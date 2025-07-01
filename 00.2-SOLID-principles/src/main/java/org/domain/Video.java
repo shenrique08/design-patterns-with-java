@@ -1,16 +1,17 @@
-package domain;
+package org.domain;
 
 import java.util.Objects;
 
-public class Livro implements MaterialBibliotecario {
+
+public class Video implements MaterialBibliotecario {
     private String titulo;
     private String autor;
-    private Integer ano;
+    private Integer duracao; // Duração em minutos
 
-    public Livro(String titulo, String autor, Integer ano) {
+    public Video(String titulo, String autor, Integer duracao) {
         this.titulo = titulo;
         this.autor = autor;
-        this.ano = ano;
+        this.duracao = duracao;
     }
 
     public String getTitulo() {
@@ -29,37 +30,38 @@ public class Livro implements MaterialBibliotecario {
         this.autor = autor;
     }
 
-    public Integer getAno() {
-        return ano;
+    public Integer getDuracao() {
+        return duracao;
     }
 
-    public void setAno(Integer ano) {
-        this.ano = ano;
+    public void setDuracao(Integer duracao) {
+        this.duracao = duracao;
     }
 
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Livro livro = (Livro) o;
-        return Objects.equals(titulo, livro.titulo) && Objects.equals(autor, livro.autor) && Objects.equals(ano, livro.ano);
+        Video video = (Video) o;
+        return Objects.equals(titulo, video.titulo) && Objects.equals(autor, video.autor) && Objects.equals(duracao, video.duracao);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(titulo, autor, ano);
+        return Objects.hash(titulo, autor, duracao);
     }
 
     @Override
     public String toString() {
-        return "Livro{" +
+        return "Video{" +
                 "titulo='" + titulo + '\'' +
                 ", autor='" + autor + '\'' +
-                ", ano=" + ano +
+                ", duracao=" + duracao +
                 '}';
     }
 
     @Override
     public String getDetalhes() {
-        return String.format("Livro: %s\tAutor: %s\tAno: %d", getTitulo(), getAutor(), getAno());
+        return String.format("Vídeo: %s\tAutor: %s\tDuração: %d min", getTitulo(), getAutor(), getDuracao());
     }
 }

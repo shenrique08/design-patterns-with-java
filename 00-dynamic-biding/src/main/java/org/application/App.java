@@ -1,8 +1,8 @@
 package org.application;
 
-import domain.Livro;
-import domain.MaterialBibliotecario;
-import domain.Revista;
+import org.domain.Livro;
+import org.domain.MaterialBibliotecario;
+import org.domain.Revista;
 
 import javax.swing.*;
 import java.awt.*;

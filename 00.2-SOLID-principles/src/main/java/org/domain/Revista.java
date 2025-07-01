@@ -1,13 +1,13 @@
-package domain;
+package org.domain;
 
 import java.util.Objects;
 
 public class Revista implements MaterialBibliotecario {
-    private String titulo;
-    private String org;
-    private Integer vol;
-    private Integer nro;
-    private Integer ano;
+    private final String titulo;
+    private final String org;
+    private final Integer vol;
+    private final Integer nro;
+    private final Integer ano;
 
     private Revista(Builder builder) {
         titulo = builder.titulo;
