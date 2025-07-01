@@ -1,0 +1,20 @@
+S -> Single Responsibility Principle
+
+    Each Class should have only one sole 'job' and not be filled with excessive features.
+
+O -> Open Closed Principle
+
+    Classes should be open to extensions, but closed for modifications.
+
+    In other words, you should not have to rewrite an existing class for implementing new features.
+
+L -> Liskov Substitution Principle
+    One subclass should be able to use its superclass without breaking the program
+    EX: If Animal has a method makeSound(), then Dog and Cat classes (which are inherited by Animal) should also has a valid makeSound() for each class
+
+I -> Interface Segregation Principle
+    No class should be forced to implement methods of an interface that it will not use
+
+D -> Dependency Inversion
+    Modules of high level should not depend on modules of low level
+    Ex:
